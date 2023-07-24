@@ -16,7 +16,6 @@ interface gameProps {
 const GamesPanel = ({ searchValue, genre }: Props) => {
   const {
     data: gameData,
-    isError,
     refetch,
     isFetching,
   } = useQuery(["games"], () => {
@@ -226,7 +225,7 @@ const GamesPanel = ({ searchValue, genre }: Props) => {
             );
           })}
         {isFetching &&
-          [...Array(n)].map((e, i) => <Skeleton key={i}></Skeleton>)}
+          [...Array(n)].map((i) => <Skeleton key={i}></Skeleton>)}
       </div>
     </div>
   );
