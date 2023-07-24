@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Skeleton from "./skeleton";
 
 interface Props {

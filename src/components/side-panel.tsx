@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
-import React, { MouseEventHandler, useEffect, useState } from "react";
+import { useState } from "react";
 
 interface DataProps {
   name: string;
