@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
-import { useState } from "react";
+import {useState } from "react";
 
 interface DataProps {
   name: string;
@@ -9,9 +9,10 @@ interface DataProps {
 }
 interface Props {
   setGenre: (val: number) => void;
+  drop: boolean;
 }
 
-const SidePanel = ({ setGenre }: Props) => {
+const SidePanel = ({ setGenre, drop }: Props) => {
   const { data, isLoading} = useQuery(["genre"], () => {
     return Axios.get(
       "https://api.rawg.io/api/genres?key=3c809f59bdbe43b399cb764cb901f09a"
@@ -20,9 +21,9 @@ const SidePanel = ({ setGenre }: Props) => {
   const[genreSelection,setGenreSelection]=useState(-1);
 
   return (
-    <div className="side-panel">
+    <div className={drop? "side-panel dropped" : "side-panel"}>
       
-      {!isLoading &&
+      {!isLoading && 
         data.results.map((res: DataProps,i:number) => {
           return (
             <div

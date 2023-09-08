@@ -196,7 +196,7 @@ const GamesPanel = ({ searchValue, genre }: Props) => {
               </li>
             </ul>
           </div>
-        </div>
+        </div> 
       </div>
       <div className="games-panel">
         {!isFetching &&
