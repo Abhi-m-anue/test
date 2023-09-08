@@ -317,6 +317,7 @@ button:hover{
     position:absolute;
     top:15.5ch;
     left:8ch;
+    padding-left:0;
   }
   .body-section >h3{
     font-size: x-large;
@@ -335,7 +336,41 @@ button:hover{
   }
   
   .games-panel{
-    margin-left:100px;
+    margin-left:50px;
   }
   
+}
+
+@media screen and (max-width:610px){
+  .content-top{
+    margin-left:80px;
+    width: 20%;
+    display: flex;
+    justify-content: left;
+  }
+  .dropdown{
+    display: block;
+    position:absolute;
+    top:12ch;
+    left:9.5ch;
+  }
+  .body-section >h3{
+    font-size: x-large;
+    position:absolute;
+    top:7.5ch;
+    left:0ch;
+  }
+  .side-panel{
+    /* width:0%; */
+    
+    left:2ch;
+   
+  }
+  .content{
+    margin: 0 auto;
+  }
+  .games-panel{
+    width: 80%;
+    margin: 0 auto;
+  }
 }
